@@ -1,0 +1,336 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px auto auto auto auto auto;
+  grid-template-areas:
+    "header"
+    "h1"
+    "div"
+    "main"
+    "aside"
+    "footer";
+  background: #ffffff;
+  padding-bottom: 60px;
+}
+
+header {
+  grid-area: header;
+  background: #FE8403;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 0 15px;
+}
+
+.ri-menu-line {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+h1 {
+  grid-area: h1;
+  padding-left: 12px;
+  font-size: 24px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.contenedor-busqueda {
+  grid-area: div;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.barra_buscador {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 8px 12px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.ri-search-line {
+  font-size: 20px;
+  color: gray;
+  margin-right: 8px;
+}
+
+.barra_buscador input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.filtro-icono {
+  font-size: 22px;
+  color: gray;
+  cursor: pointer;
+}
+
+.emprendedores-main {
+  grid-area: main;
+  padding: 0 12px;
+}
+
+.emprendedores-section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ver-todos {
+  color: #000;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.emprendedores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.emprendedor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.emprendedor-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  margin: 0 auto 12px;
+}
+
+.emprendedor-card h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.area-emprendimiento {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.btn-seguir,
+.btn-perfil {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  transition: opacity 0.2s;
+}
+
+.btn-seguir {
+  background-color: #333;
+  color: white;
+}
+
+.btn-perfil {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+aside {
+  grid-area: aside;
+  background: #fff;
+  padding: 0 12px;
+}
+
+.mini-logo {
+  margin-top: -20px;
+  padding-left: 15px;
+}
+
+.hecho-en-nl {
+  font-weight: bold;
+  color: #000;
+  margin-top: -65px;
+  padding-left: 100px;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  background-color: #FE8403;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.barra-inferior .boton {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+nav .ri-search-line {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .emprendedores-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .section-header h3 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px auto auto auto 130px;
+    grid-template-areas:
+      "header header"
+      "h1 h1"
+      "div div"
+      "main aside"
+      "footer footer";
+    padding-bottom: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .ri-menu-line {
+    display: none;
+  }
+
+  .barra-inferior {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 100px;
+  }
+
+  .menu-desktop {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-desktop a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 32px;
+    padding-left: 60px;
+  }
+
+  .contenedor-busqueda {
+    margin: 0 60px;
+  }
+
+  .emprendedores-main {
+    padding: 0 60px;
+    align-self: start;
+  }
+
+  .section-header h3 {
+    font-size: 28px;
+  }
+
+  .emprendedores-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  aside {
+    padding: 0 60px 0 0;
+    align-self: start;
+    margin-top: 80px;
+  }
+
+  footer {
+    width: 100%;
+    height: 130px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+}

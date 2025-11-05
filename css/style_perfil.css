@@ -1,0 +1,421 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+
+header {
+  background: #FE8403;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: sticky;
+  top: 0;
+  height: 75px;
+}
+
+.ri-menu-line {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+main {
+  max-width: 100%;
+}
+
+.perfil-portada .portada {
+  width: 100%;
+  height: 120px;
+  background-color: #d9d9d9;
+}
+
+.perfil-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: -30px;
+}
+
+.foto-perfil {
+  width: 70px;
+  height: 70px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+button {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.perfil-datos {
+  padding: 0 15px;
+}
+
+.perfil-datos h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0 4px 0;
+}
+
+.perfil-datos .descripcion {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.perfil-datos .ubicacion {
+  font-size: 13px;
+  color: #666;
+}
+
+.contacto {
+  font-size: 13px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.redes {
+  font-size: 13px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.perfil-historia {
+  padding: 10px 15px;
+}
+
+.perfil-historia h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.perfil-productos {
+  padding: 10px 15px;
+}
+
+.productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productos-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ver-todos {
+  font-size: 13px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.producto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.producto-imagen {
+  width: 80px;
+  height: 80px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.producto-info h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.producto-info .descripcion {
+  font-size: 12px;
+  color: #333;
+  margin: 4px 0;
+}
+
+.btn-ver {
+  display: block;
+  width: 110px;
+  margin: 8px auto 0 auto;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  background-color: #FE8403;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.barra-inferior .boton {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .perfil-portada .portada {
+    height: 150px;
+  }
+
+  .foto-perfil {
+    width: 90px;
+    height: 90px;
+  }
+
+  .perfil-info {
+    margin-top: -45px;
+  }
+
+  .perfil-datos h2 {
+    font-size: 24px;
+  }
+
+  .perfil-datos .descripcion {
+    font-size: 16px;
+  }
+
+  .perfil-datos .ubicacion {
+    font-size: 15px;
+  }
+
+  .contacto {
+    font-size: 15px;
+  }
+
+  .redes {
+    font-size: 15px;
+  }
+
+  .perfil-historia h3 {
+    font-size: 22px;
+  }
+
+  .productos-header h3 {
+    font-size: 22px;
+  }
+
+  .ver-todos {
+    font-size: 15px;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .producto {
+    padding: 15px;
+  }
+
+  .producto-imagen {
+    width: 100px;
+    height: 100px;
+  }
+
+  .producto-info h4 {
+    font-size: 16px;
+  }
+
+  .producto-info .descripcion {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  header {
+    padding: 0 60px;
+    height: 100px;
+  }
+
+  .ri-menu-line {
+    display: none;
+  }
+
+  .menu-desktop {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-desktop a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  .barra-inferior {
+    display: none;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  .perfil-portada {
+    width: 100%;
+  }
+
+  .perfil-portada .portada {
+    height: 200px;
+    width: 100%;
+  }
+
+  .perfil-portada .perfil-info {
+    padding: 0 60px;
+    margin-top: -60px;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .perfil-datos {
+    padding: 0 60px;
+  }
+
+  .perfil-datos h2 {
+    font-size: 28px;
+  }
+
+  .perfil-datos .descripcion {
+    font-size: 18px;
+  }
+
+  .perfil-datos .ubicacion {
+    font-size: 16px;
+  }
+
+  .contacto {
+    font-size: 16px;
+  }
+
+  .redes {
+    font-size: 16px;
+  }
+
+  .perfil-historia {
+    padding: 10px 60px;
+  }
+
+  .perfil-historia h3 {
+    font-size: 26px;
+  }
+
+  .perfil-productos {
+    padding: 10px 60px;
+  }
+
+  .productos-header h3 {
+    font-size: 26px;
+  }
+
+  .ver-todos {
+    font-size: 16px;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .producto {
+    padding: 15px;
+  }
+
+  .producto-imagen {
+    width: 100px;
+    height: 100px;
+  }
+
+  .producto-info h4 {
+    font-size: 18px;
+  }
+
+  .producto-info .descripcion {
+    font-size: 14px;
+  }
+
+  footer {
+    width: 100%;
+    height: 130px;
+  }
+
+  footer img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+}
